@@ -2,30 +2,65 @@
 
 ## Learning Goals
 + Describe how expression are used in programming
-+ Identify the different parts of an expression
 + Identify the return value of an assignment expression
 + Describe the Variable Lookup Expression
 + Describe the Assignment Expression
 + Identify the constant expression
 + Explain how the constant expression creates agreement
 
-## Outline
-Start with an open text editor with a blank ruby file - IDE Sandbox will work well. 
+## Lesson
 
-+ Describe how Ruby parses through expressions
-  + All code is just text in a text file that lives on a computer
-  + When we execute our program, the ruby interpreter reads through the code, evaluates each expression, and gives it a return value. 
-  + An expression like "1 + 1", Ruby interprets this expression, and knows to return 2
-+ Talk about why to use variables
-  + If all of our programs used constant data like this, that wouldn't be very interesting. 
-  + If you think about an app like Twitter or Facebook - those are only interesting because of dynamic data. You can show different things to different people. 
-  + We can accomplish this using variables - a variable is something that can have many different values of the course of our program. 
-  + We can assign it using a single equals sign.
-  + number = 5, then do a bunch of math on the number. Then change number to 7 and run it again.
-+ Constants 
-  + Useful to call-out values that don't change during the course of our program
-  + Age in Dog Years - developer might change it from 7 to 4, but it won't change during our run time
-  + In Ruby, you'll typically see this to call attention to important stuff
-  + Maybe bring up magic numbers here 
++ Hi guys, this is Ian from Flatiron School. In this video, we're going to look at variable assignment in Ruby.
++ By the end of this video, you should be able to:
+  + Describe how expression are used in programming
+  + Identify the return value of an assignment expression
+  + Describe the Variable Lookup Expression
+  + Describe the Assignment Expression
+  + Identify the constant expression
+  + Explain how the constant expression creates agreement
++ So I'm in the Learn IDE Sandbox here, with a ruby file called `app.rb`. This gives me a place to play around with code and to test stuff out.
++ Remember that all code is just text in a file that can be interpreted by a computer.
++ In Ruby, when we execute a file, the ruby interpreter is running through the file from top to bottom and looking at expressions.
++ An expression is just some combination of data or operators that will eventually evaluate to some value
++ For example, if I write 1 + 1, Ruby will evaluate that expression to `2` - basic math is something that Ruby knows how to do
++ So expressions have `return values` - the return value is what the expression will end up as.
++ Now, if all of our programs used constant data like this, they wouldn't be very interesting.
++ Programming becomes really useful when you can show different things to different people.
++ One way to do that is using a variable - a variable is something that can change over the course of our program.
++ We can define a variable using a single `=` sign.
++ Here, I'll make a variable called `name` and assign it to my name, `name = "Ian"`
++ Anytime I access this variable from this point forward in my program, it will be set to "Ian"
+```ruby
+name = "Ian"
+puts name # "Ian"
+```
++ We can change the value again by using the `=` sign
 
-
+```ruby
+name = "Ian"
+puts name # "Ian"
+name = "Ian Candy"
+puts name # "Ian Candy"
+```
++ Makes sense, right? So variables are great for things where, maybe when we're programming, we don't quite know what the value is going to be yet.
++ Let's use what we know about variables to write a program that tells you how old someone is in dog years. One hint - we usually say that your age in dog years is about 7 times what it is in regular years. How might we do this?
++ So first, let's set a variable called age. `age = 42`
++ Now, we can make another variable called `age_in_dog_years` and set it equal to age * 7 `age_in_dog_years = age * 7`
++ Lastly, we can print out our age in dog years: `puts age_in_dog_years`
++ So this works great, and we can change the age to a different value and it also works well. Something we'll look at in a future video is - how do we actually get this age from someplace else? Like, how do we have a user type in their age? That would make this even more interesting.
++ One last thing to note - there's a special kind of variable in Ruby called a Constant. A constant works just like any other variable, except it's value should stay the same throughout the program. Once it gets set, it will give us a warning if it ever changes.
++ In Ruby, you'll typically see this to call attention to important stuff that doesn't really change. In the example here, we're doing something called a `magic number` - if you didn't watch this video, you might be confused as to why the number 7 is here. So this is a good candidate to use a constant variable for. Let's do that now:
+```ruby
+DOG_YEARS_PER_YEAR = 7
+age = 42
+age_in_dog_years = age * DOG_YEARS_PER_YEAR
+puts age_in_dog_years
+```
++ So that makes things a bit more clear. Now, if the programmer needs to change that constant, they can do so. For example, some people say 4 dog years per year is actually more accurate. We can easily change that if we need to, and it works well.
++ That's it for this one - to recap:
++ We talked about how expressions are used in programming, such as math expressions and variable assignment
++ We looked at the return values of different expressions
++ We described the Variable Lookup Expression, and how ruby finds a variable value
++ We looked at how to use the variable assignment expression and how that works in our applications
++ And we also looked at how to use constants and why they are useful.
++ So thanks so much for watching - happy coding!

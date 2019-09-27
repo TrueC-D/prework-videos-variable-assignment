@@ -48,6 +48,16 @@ puts name # "Ian Candy"
 + So this works great, and we can change the age to a different value and it also works well. Something we'll look at in a future video is - how do we actually get this age from someplace else? Like, how do we have a user type in their age? That would make this even more interesting.
 + One last thing to note - there's a special kind of variable in Ruby called a Constant. A constant works just like any other variable, except it's value should stay the same throughout the program. Once it gets set, it will give us a warning if it ever changes.
 + In Ruby, you'll typically see this to call attention to important stuff that doesn't really change. In the example here, we're doing something called a `magic number` - if you didn't watch this video, you might be confused as to why the number 7 is here. So this is a good candidate to use a constant variable . Let's do that now:
++ I can define a constant the same way I do a variable, only it must start with a capital letter. By convention, for constant values like this, I'll use all caps.
+```ruby
+DOG_YEARS_PER_YEAR = 7
+```
++ Now, while running the program, if Ruby sees this constant change, it will throw a warning.
+```ruby
+DOG_YEARS_PER_YEAR = 7
+DOG_YEARS_PER_YEAR = 4 # Throws a warning
+```
++ So, the programmer can change this before it runs, but the value can't change mid-course so to speak.
 ```ruby
 DOG_YEARS_PER_YEAR = 7
 age = 42

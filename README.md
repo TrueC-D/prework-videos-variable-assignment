@@ -11,7 +11,7 @@
 
 + Hi guys, this is Ian from Flatiron School. In this video, we're going to look at variable assignment in Ruby.
 + By the end of this video, you should be able to:
-  + Describe how expression are used in programming
+  + Describe how expressions are used in programming
   + Identify the return value of an assignment expression
   + Describe the Variable Lookup Expression
   + Describe the Assignment Expression
@@ -27,7 +27,7 @@
 + One way to do that is using a variable - a variable is something that holds a value that can change over the course of our program.
 + We can define a variable using a single `=` sign.
 + Here, I'll make a variable called `name` and assign it to my name, `name = "Ian"`
-+ Anytime I access this variable from this point forward in my program, it will be set to "Ian"
++ Anytime I access this variable from this point forward in my program, it will be set to the string "Ian"
 ```ruby
 name = "Ian"
 puts name # "Ian"
@@ -47,15 +47,16 @@ puts name # "Ian Candy"
 + Lastly, we can print out our age in dog years: `puts age_in_dog_years`
 + So this works great, and we can change the age to a different value and it also works well. Something we'll look at in a future video is - how do we actually get this age from someplace else? Like, how do we have a user type in their age? That would make this even more interesting.
 + One last thing to note - there's a special kind of variable in Ruby called a Constant. A constant works just like any other variable, except it's value should stay the same throughout the program. Once it gets set, it will give us a warning if it ever changes.
-+ In Ruby, you'll typically see this to call attention to important stuff that doesn't really change. In the example here, we're doing something called a `magic number` - if you didn't watch this video, you might be confused as to why the number 7 is here. So this is a good candidate to use a constant variable . Let's do that now:
++ In Ruby, you'll typically see this to call attention to important stuff that doesn't really change. In the example here, we're doing something called a `magic number` 
++ If you were reading this file but didn't watch this video, you might be confused as to why the number 7 is here. So this number is a good candidate for a constant variable. Let's create that variable now:
 + I can define a constant the same way I do a variable, only it must start with a capital letter. By convention, for constant values like this, I'll use all caps.
 ```ruby
 DOG_YEARS_PER_YEAR = 7
 ```
-+ Now, while running the program, if Ruby sees this constant change, it will throw a warning.
++ Now, while running the program, if Ruby sees this constant change, it will give us a warning.
 ```ruby
 DOG_YEARS_PER_YEAR = 7
-DOG_YEARS_PER_YEAR = 4 # Throws a warning
+DOG_YEARS_PER_YEAR = 4 # Gives us a warning
 ```
 + So, the programmer can change this before it runs, but the value can't change mid-course so to speak.
 ```ruby

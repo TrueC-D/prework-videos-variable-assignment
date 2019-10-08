@@ -13,13 +13,14 @@
 + By the end of this video, you should be able to:
   + Describe how expressions are used in programming
   + Identify the return value of an assignment expression
-  + Describe the Variable Lookup Expression
+  + Describe how variable lookup works in Ruby
   + Describe the Assignment Expression
   + Identify the constant expression
 + So I'm in the Learn IDE Sandbox here, with a ruby file called `app.rb`. This gives me a place to play around with code and to test stuff out.
 + Remember that all code is just text in a file that can be interpreted by a computer.
 + In Ruby, when we execute a file, the ruby interpreter is running through the file from top to bottom and looking at expressions.
-+ An expression is just some combination of data or operators that will eventually evaluate to some value
++ An expression is just some combination of code that will eventually return some value.
++ This combination could be data - such as a string of text or a number, or an operator, like the `+` sign. 
 + For example, if I write 1 + 1, Ruby will evaluate that expression to `2` - basic math is something that Ruby knows how to do
 + So expressions have `return values` - the return value is what the expression will end up as.
 + Now, if all of our programs used constant data like this, they wouldn't be very interesting.
@@ -71,7 +72,7 @@ puts age_in_dog_years
 + That's it for this one - to recap:
 + We talked about how expressions are used in programming, such as math expressions and variable assignment
 + We looked at the return values of different expressions
-+ We described the Variable Lookup Expression, and how ruby finds a variable value
++ We described how ruby looks up a variables value, and why that's useful for our programs. 
 + We looked at how to use the variable assignment expression and how that works in our applications
 + And we also looked at how to use constants and why they are useful.
 + So thanks so much for watching - happy coding!
